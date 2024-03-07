@@ -1,0 +1,49 @@
+/* phone */
+@media (max-width: 575px) {
+  .containers {
+    width: 100vh;
+    margin: 30px auto;
+    padding: 20px;
+  }
+
+  .form-input {
+    width: 10rem;
+  }
+}
+
+/* tablets */
+@media (min-width: 768px) and (max-width: 991px) {
+  .containers {
+    width: 90vw;
+    height: 100vh;
+    margin: 30px auto;
+    padding: 20px;
+  }
+}
+
+/* desktop */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .containers {
+    width: 90vw;
+    margin: 30px auto;
+    padding: 20px;
+  }
+}
+
+/* large desktop */
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .containers {
+    width: 80vw;
+    margin: 30px auto;
+    padding: 20px;
+  }
+}
+
+/* xlarge desktop */
+@media (min-width: 1400px) {
+  .containers {
+    width: 80vw;
+    margin: 30px auto;
+    padding: 20px;
+  }
+}

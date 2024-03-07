@@ -1,0 +1,152 @@
+body {
+  font-family: "Dosis", sans-serif;
+  line-height: 1.5;
+  font-size: 1rem;
+  color: #333;
+  background-color: #f5f5f5;
+}
+title {
+  color: #333;
+}
+#loading {
+  display: none;
+}
+
+.container {
+  max-width: 50rem;
+  border: #333 solid 1px;
+}
+
+.page-header {
+  background-color: #6600cc;
+  color: #ffffff;
+}
+
+.input-group input:hover {
+  border: 0.1rem #4d0099 solid;
+}
+
+.header {
+  text-align: center;
+  font-size: 1.2rem;
+  border-bottom: 0.1rem #d9b3ff dashed;
+}
+
+/* button styles */
+.btn {
+  background-color: #4d0099;
+  color: #ffffff;
+}
+
+.btn:hover {
+  background-color: #330066;
+  color: #ffffff;
+}
+
+.btnCalculate {
+  background-color: #8000ff;
+  border: none;
+  padding: 0.5rem 0;
+}
+
+.btnMotivation {
+  background-color: #8000ff;
+  color: #ffffff;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0;
+}
+
+.btnMotivation:hover {
+  background-color: #6600cc;
+}
+
+.btnDelete {
+  border: none;
+  background: transparent;
+  color: #f2e6ff;
+  background-color: #4d0099;
+  border-radius: 0.5rem;
+}
+.btnDelete:hover {
+  scale: 1.2;
+}
+
+/* total calorie part */
+
+.total {
+  border: 0.1rem #6600cc solid;
+  width: 4rem;
+  text-align: center;
+}
+.totalW {
+  opacity: 0;
+}
+
+/* alert part */
+.alert {
+  opacity: 0.8;
+}
+.alert h1 {
+  font-size: 1rem;
+  text-align: center;
+}
+.alert p {
+  font-size: 1rem;
+  text-align: left;
+}
+
+.alert ul {
+  font-size: 0.7rem;
+  text-align: left;
+}
+
+/* Loading icon */
+.spinner-grow {
+  color: #6600cc;
+}
+
+/* All result after search */
+.div {
+  display: flex;
+  flex-direction: row;
+  padding: 0.5rem;
+}
+@media (max-width: 575.98px) {
+  .page-header {
+    text-align: center;
+  }
+
+  .page-header h1 {
+    font-size: 1rem;
+  }
+
+  .page-header p {
+    font-size: 0.5rem;
+  }
+  .container {
+    max-width: 20rem;
+  }
+
+  td input {
+    width: 3rem;
+  }
+
+  th {
+    font-size: 0.6rem;
+  }
+
+  td {
+    font-size: 0.5rem;
+  }
+  .btnMotivation {
+    font-size: 0.6rem;
+    padding: 0.5rem;
+  }
+  .d-flex {
+    justify-content: center !important;
+  }
+  .d-flex h2 {
+    font-size: 1rem;
+  }
+}
