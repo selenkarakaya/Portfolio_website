@@ -650,3 +650,12 @@ h4 {
 #main-footer .footer-content p {
   font-size: 1.1rem;
 }
+
+.slideshow {
+  max-width: 600px;
+  margin: auto;
+  position: relative;
+}
+.slide {
+  display: none;
+}
