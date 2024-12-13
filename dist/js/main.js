@@ -128,3 +128,14 @@ document.addEventListener("DOMContentLoaded", function () {
   // Initially, show the video
   slides[currentIndex].classList.add("active");
 });
+
+const videos = document.querySelectorAll(".video");
+
+// Loop through each video and attach an event listener for the 'ended' event
+videos.forEach((video) => {
+  video.onended = () => {
+    // Restart the video from the beginning
+    video.currentTime = 0;
+    video.play();
+  };
+});
