@@ -90,17 +90,9 @@
         <h5 class="fs-4 fw-bold text-center">Monthly Hobbies Planner</h5>
         <div class="d-flex flex-row">
           <div class="col-sm-4 d-flex justify-content-center">
-            <div class="slideshow">
-              <div class="slide">
-                <img src="./image/planner1.png" alt="Image 1" />
-              </div>
-              <div class="slide">
-                <img src="./image/planner2.png" alt="Image 2" />
-              </div>
-              <div class="slide">
-                <img src="./image/planner3.png" alt="Image 1" />
-              </div>
-            </div>
+            <video id="video" autoplay muted class="w-100">
+              <source src="./image/planner.mp4" type="video/mp4" />
+            </video>
           </div>
           <div class="col-sm-7">
             <div class="card text-center">
@@ -243,23 +235,9 @@
         <h5 class="fs-4 fw-bold text-center">Movies&Book Tracker</h5>
         <div class="d-flex flex-row-reverse">
           <div class="col-sm-4 d-flex justify-content-center">
-            <div class="slideshow">
-              <div class="slide">
-                <video autoplay muted loop width="640" height="360">
-                  <source src="./image/Untitled.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-              <div class="slide">
-                <img src="./image/soon.jpg" alt="Image 1" />
-              </div>
-              <div class="slide">
-                <img src="./image/soon.jpg" alt="Image 2" />
-              </div>
-              <div class="slide">
-                <img src="./image/soon.jpg" alt="Image 3" />
-              </div>
-            </div>
+            <video id="video" autoplay muted class="w-100">
+              <source src="./image/tracker.mp4" type="video/mp4" />
+            </video>
           </div>
           <div class="col-sm-7">
             <div class="card text-center">
@@ -310,15 +288,36 @@
         <h5 class="fs-4 fw-bold text-center">Riverside Farm</h5>
         <div class="d-flex flex-row">
           <div class="col-sm-4 d-flex justify-content-center">
-            <div class="slideshow">
-              <div class="slide">
-                <img src="./image/soon.jpg" alt="Image 1" />
+            <div class="slider-container">
+              <!-- Video slide -->
+              <div class="slider-slide video-slide">
+                <video id="video" autoplay muted class="w-100">
+                  <!-- <source src="./image/tracker.mp4" type="video/mp4" /> -->
+                  Your browser does not support the video tag.
+                </video>
               </div>
-              <div class="slide">
-                <img src="./image/soon.jpg" alt="Image 2" />
+
+              <!-- Image slides -->
+              <div class="slider-slide image-slide">
+                <img
+                  src="./image/tracker1.png"
+                  alt="Image Slide 1"
+                  class="w-100"
+                />
               </div>
-              <div class="slide">
-                <img src="./image/soon.jpg" alt="Image 3" />
+              <div class="slider-slide image-slide">
+                <img
+                  src="./image/tracker2.png"
+                  alt="Image Slide 2"
+                  class="w-100"
+                />
+              </div>
+              <div class="slider-slide image-slide">
+                <img
+                  src="./image/tracker3.png"
+                  alt="Image Slide 3"
+                  class="w-100"
+                />
               </div>
             </div>
           </div>
@@ -367,41 +366,6 @@
         </div>
       </div>
     </section>
-    <div class="slider-container">
-      <!-- Video slide -->
-      <div class="slider-slide video-slide">
-        <video id="video" autoplay muted width="640" height="360">
-          <source src="./image/tracker.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </div>
-
-      <!-- Image slides -->
-      <div class="slider-slide image-slide">
-        <img
-          src="./image/longevity2.png"
-          alt="Image Slide 1"
-          width="640"
-          height="360"
-        />
-      </div>
-      <div class="slider-slide image-slide">
-        <img
-          src="./image/planner3.png"
-          alt="Image Slide 2"
-          width="640"
-          height="360"
-        />
-      </div>
-      <div class="slider-slide image-slide">
-        <img
-          src="./image/studio1.png"
-          alt="Image Slide 3"
-          width="640"
-          height="360"
-        />
-      </div>
-    </div>
 
     <footer id="main-footer">
       <div class="footer-content container">
