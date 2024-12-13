@@ -84,6 +84,10 @@
   #about-b .col-sm-4 {
     margin: 0 1rem;
   }
+  #work-a .flex-row,
+  .flex-row-reverse {
+    flex-direction: column !important;
+  }
 }
 @media (min-width: 400px) and (max-width: 768px) {
   #main-nav {
@@ -175,6 +179,10 @@
   #about-b .col-sm-4 {
     margin: 0 1rem;
   }
+  #work-a .flex-row,
+  .flex-row-reverse {
+    flex-direction: column !important;
+  }
   #work-a .col-sm-4 {
     margin-bottom: 1rem;
   }
@@ -233,6 +241,21 @@
   #about-a .about-info .bio {
     margin-top: 1rem;
     width: 100% !important;
+  }
+  #work-a .flex-row,
+  .flex-row-reverse {
+    flex-direction: column !important;
+  }
+  #work-a .flex-row .col-sm-4,
+  .flex-row-reverse .col-sm-4 {
+    margin: 2rem auto;
+    width: 80vw;
+  }
+
+  #work-a .flex-row .col-sm-7,
+  .flex-row-reverse .col-sm-7 {
+    margin: auto;
+    width: 100vw;
   }
 }
 
