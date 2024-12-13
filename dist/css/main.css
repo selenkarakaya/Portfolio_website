@@ -255,7 +255,7 @@
   --text-color: #191919;
   --light-color: #f4f1e8;
   --neutral-shade: #bd8f53;
-  --highlight-color: #f4a300; /* Warm Golden Yellow */
+  --highlight-color: #f4a300;
 }
 * {
   margin: 0;
@@ -804,4 +804,51 @@ h4 {
 
 .hover-border:hover::after {
   width: 100%;
+}
+
+/* Header animation */
+
+#animated-header {
+  font-size: 2rem;
+  white-space: nowrap;
+  animation: blink-caret 0.5s step-end infinite;
+}
+
+@keyframes blink-caret {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.reflection {
+  position: relative;
+
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.reflection::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.5),
+    transparent
+  );
+  transform: skewX(-20deg);
+  animation: shine 2s infinite;
+}
+
+@keyframes shine {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
 }

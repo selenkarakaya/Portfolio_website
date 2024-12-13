@@ -28,3 +28,20 @@ for (let i = 0; i < slideContainer.length; i++) {
   };
   slider();
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const text = "Project Gallery";
+  const header = document.getElementById("animated-header");
+  let index = 0;
+  console.log(header.textContent);
+
+  function typeEffect() {
+    if (index < text.length) {
+      header.textContent += text[index];
+      index++;
+      setTimeout(typeEffect, 100); // Adjust typing speed (in milliseconds)
+    }
+  }
+
+  typeEffect();
+});
