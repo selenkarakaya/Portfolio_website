@@ -852,3 +852,55 @@ h4 {
     left: 100%;
   }
 }
+
+.slider-container {
+  position: relative;
+  width: 640px;
+  height: 360px;
+  overflow: hidden;
+}
+
+.slider-slide {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: left 1s ease, opacity 1s ease;
+}
+
+/* Show the active slide */
+.slider-slide.active {
+  left: 0;
+  opacity: 1;
+}
+
+/* Transition effect for smooth slide-in/out */
+.slider-container:hover .slider-slide {
+  animation: slide 12s infinite;
+}
+
+/* Keyframe animation for sliding transition */
+@keyframes slide {
+  0% {
+    left: 100%;
+    opacity: 0;
+  }
+  25% {
+    left: 0%;
+    opacity: 1;
+  }
+  50% {
+    left: 100%;
+    opacity: 0;
+  }
+  75% {
+    left: 100%;
+    opacity: 0;
+  }
+  100% {
+    left: 100%;
+    opacity: 0;
+  }
+}

@@ -28,7 +28,7 @@ for (let i = 0; i < slideContainer.length; i++) {
   };
   slider();
 }
-
+// header animation//
 document.addEventListener("DOMContentLoaded", () => {
   const text = "Project Gallery";
   const header = document.getElementById("animated-header");
@@ -42,6 +42,89 @@ document.addEventListener("DOMContentLoaded", () => {
       setTimeout(typeEffect, 100); // Adjust typing speed (in milliseconds)
     }
   }
-
   typeEffect();
+});
+
+// document.addEventListener("DOMContentLoaded", function () {
+//   const slides = document.querySelectorAll(".slider-slide");
+//   const video = document.getElementById("video");
+//   let currentIndex = 0;
+
+//   // Show the first slide (video)
+//   slides[currentIndex].classList.add("active");
+
+//   // Function to move to the next slide
+//   function nextSlide() {
+//     // Remove the 'active' class from the current slide
+//     slides[currentIndex].classList.remove("active");
+
+//     // Increment the index (loop back if necessary)
+//     currentIndex = (currentIndex + 1) % slides.length;
+
+//     // Add the 'active' class to the next slide
+//     slides[currentIndex].classList.add("active");
+//   }
+
+//   // Handle video end to trigger the next slide (image)
+//   video.addEventListener("ended", function () {
+//     nextSlide(); // Transition to the first image after video ends
+//   });
+
+//   // Once the page is loaded, wait for the video to finish before starting to show images
+//   video.addEventListener("play", function () {
+//     // Set a listener for when the video ends to show the next slide (image)
+//     video.addEventListener("ended", function () {
+//       nextSlide(); // Transition to the first image after video ends
+//     });
+//   });
+
+//   // The images will transition every 5 seconds after the video ends
+//   setInterval(() => {
+//     if (currentIndex > 0) {
+//       nextSlide();
+//     }
+//   }, 5000); // Adjust the interval for image transitions as needed
+// });
+document.addEventListener("DOMContentLoaded", function () {
+  const slides = document.querySelectorAll(".slider-slide");
+  const video = document.getElementById("video");
+  let currentIndex = 0;
+  let totalSlides = slides.length;
+
+  // Function to move to the next slide
+  function nextSlide() {
+    // Remove the 'active' class from the current slide
+    slides[currentIndex].classList.remove("active");
+
+    // Increment the index (loop back to the first slide if necessary)
+    currentIndex = (currentIndex + 1) % totalSlides;
+
+    // Add the 'active' class to the next slide
+    slides[currentIndex].classList.add("active");
+  }
+
+  // Handle video end to trigger the next slide (image)
+  video.addEventListener("ended", function () {
+    nextSlide(); // Transition to the first image after the video ends
+  });
+
+  // Function to loop back to the video after the last image
+  function resetToVideo() {
+    // If we are at the last image (image3), reset to the first slide (video)
+    if (currentIndex === totalSlides - 1) {
+      currentIndex = 0;
+      slides[currentIndex].classList.add("active");
+    }
+  }
+
+  // Every 5 seconds, move to the next image slide after the video ends
+  setInterval(() => {
+    if (currentIndex > 0) {
+      nextSlide(); // Transition to the next slide (image)
+      resetToVideo(); // After the last image, loop back to the video
+    }
+  }, 5000); // Image transition interval
+
+  // Initially, show the video
+  slides[currentIndex].classList.add("active");
 });
