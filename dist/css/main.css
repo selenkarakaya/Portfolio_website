@@ -312,7 +312,8 @@ p {
 h2,
 h3,
 h4,
-h5 {
+h5,
+h6 {
   color: var(--primary-color);
 }
 .container {
@@ -566,9 +567,7 @@ h4 {
   box-shadow: 1.5rem 1.5rem 1rem -1rem var(--primary-color);
   border-radius: 0.5rem;
 }
-#about-a .bio p {
-  color: var(--primary-color);
-}
+
 #about-b .col-sm-3 {
   margin-bottom: 1rem;
   margin-right: 1rem;
