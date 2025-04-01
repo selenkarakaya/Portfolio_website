@@ -388,43 +388,44 @@ h6 {
   padding: 0.5rem;
   transition: border-color 0.5s;
 }
-#main-nav a:hover {
+/* #main-nav a:hover {
   color: var(--secondary-color);
   border-color: var(--primary-color);
-}
-#main-nav a.current {
+} */
+/* #main-nav a.current {
   border-color: var(--secondary-color);
-}
+} */
 
 #header-inner {
   background: url("../image/header.jpg") no-repeat 60% 70% / cover;
-  height: 7rem;
+  height: 9rem;
+
   /* border-bottom: 3px solid var(--highlight-color); */
 }
 #header-inner a {
   color: var(--light-color);
 }
-#header-inner a:hover {
+/* #header-inner a:hover {
   color: var(--highlight-color);
   border-color: var(--primary-color);
 }
 #header-inner a.current {
   border-color: var(--primary-color);
-}
+} */
 /* Home Page */
 #header-home {
   background: url("../image/home.png");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
-  height: 60vh;
+  background-position: top;
+  height: 80vh;
 }
 #header-home .header-content {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 65%;
+  height: 100%;
 }
 #header-home h1 {
   font-size: 4rem;
@@ -919,4 +920,140 @@ h4 {
     left: 100%;
     opacity: 0;
   }
+}
+
+.navigation {
+  position: relative;
+  width: 25rem;
+  height: 4.6rem;
+  /* background: linear-gradient(45deg, #ecad88, #9b4819); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #9b4819;
+  border-radius: 0.625rem;
+  margin-top: 2rem;
+  margin-right: 1rem;
+}
+.navigation ul {
+  display: flex;
+  width: 21.875rem;
+  margin-bottom: 2rem;
+}
+.navigation ul li {
+  position: relative;
+  width: 4.375rem;
+  height: 4.375rem;
+  list-style: none;
+  z-index: 1;
+}
+.navigation ul li a {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  font-weight: 500;
+}
+
+.navigation ul li a .icon {
+  position: relative;
+  display: block;
+  line-height: 4.6875rem;
+  font-size: 1.5em;
+  text-align: center;
+  color: #fff;
+  transition: transform 0.2s;
+}
+.navigation ul li .icon:hover {
+  transform: scale(1.3);
+}
+.navigation ul li.active a .icon {
+  transform: translateY(-3.1rem);
+}
+.navigation ul li a .text {
+  position: absolute;
+  color: #fff;
+  font-weight: 400;
+  font-size: 1.3rem;
+  letter-spacing: 0.05em;
+  opacity: 0;
+  transform: translateY(1.25rem);
+  transition: 0.5s;
+}
+.navigation ul li.active a .text {
+  opacity: 1;
+  transform: translateY(0.625rem);
+}
+.navigation ul li a .circle {
+  position: absolute;
+  display: block;
+  width: 3.125rem;
+  height: 3.125rem;
+  background: transparent;
+  border-radius: 50%;
+  border: 0.1125rem solid #fff;
+  transform: translateY(-1.875rem) scale(0);
+}
+.navigation ul li.active a .circle {
+  transition: 0.5s;
+  transition-delay: 0.5s;
+  transform: translateY(-2.85rem) scale(1);
+}
+.indicator {
+  position: absolute;
+  top: -50%;
+  width: 4.375rem;
+  height: 4.375rem;
+  background: linear-gradient(45deg, #ecad88, #9b4819);
+  border: 6px solid #ccc0ba;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+}
+.indicator::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -22px;
+  width: 1.25rem;
+  height: 1.25rem;
+  background: transparent;
+  border-top-right-radius: 1.25rem;
+}
+.indicator::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -22px;
+  width: 1.25rem;
+  height: 1.25rem;
+  background: transparent;
+  border-top-left-radius: 1.25rem;
+}
+.navigation ul li:nth-child(1).active ~ .indicator {
+  transform: translateX(calc(4.375rem * 0));
+}
+.navigation ul li:nth-child(2).active ~ .indicator {
+  transform: translateX(calc(4.375rem * 1));
+}
+.navigation ul li:nth-child(3).active ~ .indicator {
+  transform: translateX(calc(4.375rem * 2));
+}
+.navigation ul li:nth-child(4).active ~ .indicator {
+  transform: translateX(calc(4.375rem * 3));
+}
+.navigation ul li:nth-child(5).active ~ .indicator {
+  transform: translateX(calc(4.375rem * 4));
+}
+
+.inContact {
+  left: 24.3%;
+  top: -65% !important;
+  width: 3.5rem !important;
+  height: 3.5rem !important;
 }

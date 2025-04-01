@@ -39,17 +39,46 @@
 
   <body>
     <header id="header-inner" class="pseudo-wave-border">
-      <div class="container">
+      <div class="">
         <div id="main-nav">
           <img src="./image/logo.png" alt="My Portfolio" id="logo" />
-          <nav>
+          <div class="navigation">
             <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="about.html">About</a></li>
-              <li><a href="project.html" class="current">Projects</a></li>
-              <li><a href="contact.html">Contact Me</a></li>
+              <li class="list">
+                <a href="index.html">
+                  <span class="icon"><i class="fa-solid fa-house"></i></span>
+                  <span class="text">Home</span>
+                  <span class="circle"></span>
+                </a>
+              </li>
+              <li class="list">
+                <a href="about.html">
+                  <span class="icon"><i class="fa-solid fa-user"></i></span>
+                  <span class="text">About</span>
+                  <span class="circle"></span>
+                </a>
+              </li>
+              <li class="list active">
+                <a href="project.html">
+                  <span class="icon"
+                    ><i class="fa-solid fa-list-check"></i
+                  ></span>
+                  <span class="text">Project</span>
+                  <span class="circle"></span>
+                </a>
+              </li>
+              <li class="list">
+                <a href="contact.html">
+                  <span class="icon"
+                    ><i class="fa-solid fa-square-envelope"></i
+                  ></span>
+                  <span class="text">Contact Me</span>
+                  <span class="circle"></span>
+                </a>
+              </li>
+              <div class="indicator"></div>
             </ul>
-          </nav>
+          </div>
         </div>
       </div>
     </header>
@@ -84,7 +113,6 @@
         </p>
       </div>
     </section>
-
     <section id="work-a" class="my-5 px-5">
       <div class="d-flex flex-column my-5">
         <h5 class="fs-4 fw-bold text-center">Monthly Hobbies Planner</h5>
