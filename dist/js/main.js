@@ -1,34 +1,12 @@
-const slideContainer = document.querySelectorAll(".slideshow");
-
-for (let i = 0; i < slideContainer.length; i++) {
-  const slider = function () {
-    const slides = slideContainer[i].querySelectorAll(".slide");
-    let index = 0;
-    let transitionDelay = 2000;
-    // set transition delay for slides
-    for (let slide of slides) {
-      slide.style.transition = `all ${transitionDelay / 1000}s linear`;
-    }
-    // show the first slide
-    showSlide(index);
-    // show a specific slide
-    function showSlide(slideNumber) {
-      slides.forEach((slide, i) => {
-        slide.style.display = i == slideNumber ? "block" : "none";
-      });
-      // next index
-      index++;
-      // go back to 0 if at the end of slides
-      if (index >= slides.length) {
-        index = 0;
-      }
-    }
-    // transition to next slide every x seconds
-    setInterval(() => showSlide(index), transitionDelay);
-  };
-  slider();
+// Navigation bar display
+const list = document.querySelectorAll(".list");
+function activeLink() {
+  list.forEach((item) => item.classList.remove("active"));
+  this.classList.add("active");
 }
-// header animation//
+list.forEach((item) => item.addEventListener("click", activeLink));
+
+// header animation
 document.addEventListener("DOMContentLoaded", () => {
   const text = "Project Gallery";
   const header = document.getElementById("animated-header");
@@ -45,53 +23,8 @@ document.addEventListener("DOMContentLoaded", () => {
   typeEffect();
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  const slides = document.querySelectorAll(".slider-slide");
-  const video = document.getElementById("video");
-  let currentIndex = 0;
-  let totalSlides = slides.length;
-
-  // Function to move to the next slide
-  function nextSlide() {
-    // Remove the 'active' class from the current slide
-    slides[currentIndex].classList.remove("active");
-
-    // Increment the index (loop back to the first slide if necessary)
-    currentIndex = (currentIndex + 1) % totalSlides;
-
-    // Add the 'active' class to the next slide
-    slides[currentIndex].classList.add("active");
-  }
-
-  // Handle video end to trigger the next slide (image)
-  video.addEventListener("ended", function () {
-    nextSlide(); // Transition to the first image after the video ends
-  });
-
-  // Function to loop back to the video after the last image
-  function resetToVideo() {
-    // If we are at the last image (image3), reset to the first slide (video)
-    if (currentIndex === totalSlides - 1) {
-      currentIndex = 0;
-      slides[currentIndex].classList.add("active");
-    }
-  }
-
-  // Every 5 seconds, move to the next image slide after the video ends
-  setInterval(() => {
-    if (currentIndex > 0) {
-      nextSlide(); // Transition to the next slide (image)
-      resetToVideo(); // After the last image, loop back to the video
-    }
-  }, 5000); // Image transition interval
-
-  // Initially, show the video
-  slides[currentIndex].classList.add("active");
-});
-
-const videos = document.querySelectorAll(".video");
-
 // Loop through each video and attach an event listener for the 'ended' event
+const videos = document.querySelectorAll(".video");
 videos.forEach((video) => {
   video.onended = () => {
     // Restart the video from the beginning
@@ -100,9 +33,26 @@ videos.forEach((video) => {
   };
 });
 
-const list = document.querySelectorAll(".list");
-function activeLink() {
-  list.forEach((item) => item.classList.remove("active"));
-  this.classList.add("active");
+//scroll animation on about page
+
+const boxes = document.querySelectorAll(".box");
+window.addEventListener("scroll", displayBoxes);
+
+//if you don't call function, it doesn't show it until a user scrolls
+displayBoxes();
+
+function displayBoxes() {
+  // When scroll down, where do they start to come in?
+  const startPoint = (window.innerHeight / 5) * 4;
+
+  boxes.forEach((box) => {
+    //  returns the position and size of the element (box) relative to the viewport
+    const boxTop = box.getBoundingClientRect().top;
+
+    if (boxTop < startPoint) {
+      box.classList.add("show");
+    } else {
+      box.classList.remove("show");
+    }
+  });
 }
-list.forEach((item) => item.addEventListener("click", activeLink));
