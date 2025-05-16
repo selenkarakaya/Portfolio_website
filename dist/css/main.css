@@ -559,9 +559,20 @@ h4 {
   border: 1px solid #1b1b1b;
   justify-content: space-between;
   box-shadow: 1.5rem 1.5rem 1rem -1rem var(--secondary-color);
+  transform: translateX(400%);
+  transition: transform 0.4s ease;
 }
 #about-b .col-sm-3 .card {
   border: none;
+}
+
+/* 
+selects the even-numbered elements */
+#about-b .col-sm-3:nth-of-type(even) {
+  transform: translateX(-400%);
+}
+#about-b .col-sm-3.show {
+  transform: translateX(0);
 }
 
 /* Project page */
